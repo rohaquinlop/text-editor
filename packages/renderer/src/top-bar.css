@@ -1,0 +1,170 @@
+body .top-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: var(--btn-height);
+  border-bottom: 3px solid #2b2b2b;
+  background-color: #f2b138;
+  user-select: none;
+}
+
+.top-bar > .title-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-bar > .title-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.title-bar > .title-window {
+  margin-left: 10px;
+  width: 100%;
+  line-height: 30px;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  -webkit-app-region: drag;
+}
+
+.top-bar > .title-bar-btns {
+  display: flex;
+  flex-direction: row;
+  width: var(--btn-height) * 3;
+  height: var(--btn-height);
+}
+
+.top-bar > .special-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.special-btns,
+.submenu-control {
+  padding: 0px;
+  margin: 0px;
+}
+
+.special-btns > .special-btn {
+  height: var(--btn-height);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.special-btns > .special-btn:hover {
+  background-color: #ebd09d;
+}
+
+.special-btns > .special-btn:active {
+  background-color: #886422;
+}
+
+.title-bar-btns > .top-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.title-bar-btns > .top-btn:hover {
+  background-color: #ebd09d;
+}
+
+.title-bar-btns > .top-btn:active {
+  background-color: #886422;
+}
+
+/*Sub menus*/
+
+/*File*/
+.special-btns,
+.file-menu,
+.submenu {
+  list-style: none;
+}
+
+.special-btns > .submenu-control > .special-btn {
+  height: var(--btn-height);
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.special-btns > .submenu-control .special-btn:hover {
+  background-color: #ebd09d;
+}
+
+.special-btns > .submenu-control .special-btn:active {
+  background-color: #886422;
+}
+
+.special-btns > .submenu-control {
+  float: left;
+}
+
+.submenu-control > .submenu {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  justify-items: flex-start;
+  padding: 0px;
+}
+
+.submenu-control:hover > .submenu {
+  display: block;
+}
+
+.submenu > .special-btn {
+  height: var(--btn-height);
+  text-decoration: none;
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.submenu {
+  background-color: #dfac4e;
+}
+
+.submenu > li > .special-btn {
+  height: var(--btn-menu-height);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  cursor: pointer;
+  width: 100%;
+  font-weight: normal;
+}
+
+.title-window {
+  font-weight: bold;
+  text-align: center;
+}
