@@ -29,6 +29,8 @@ let mainWindow: BrowserWindow | null = null;
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
     show: false, // Use 'ready-to-show' event to show window
+    vibrancy: 'under-window',
+    visualEffectState: 'active',
     webPreferences: {
       nativeWindowOpen: true,
       preload: join(__dirname, '../../preload/dist/index.cjs'),
@@ -44,9 +46,11 @@ const createWindow = async () => {
   mainWindow.on('ready-to-show', () => {
     mainWindow?.show();
 
+    /*
     if (import.meta.env.MODE === 'development') {
       mainWindow?.webContents.openDevTools();
     }
+    */
   });
 
   /**

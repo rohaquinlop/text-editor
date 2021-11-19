@@ -1,6 +1,6 @@
-import {node} from '../../electron-vendors.config.json';
-import {join} from 'path';
-import {builtinModules} from 'module';
+import { node } from '../../electron-vendors.config.json';
+import { join } from 'path';
+import { builtinModules } from 'module';
 
 const PACKAGE_ROOT = __dirname;
 
@@ -32,7 +32,7 @@ const config = {
       external: [
         'electron',
         'electron-devtools-installer',
-        ...builtinModules,
+        ...builtinModules.filter(m => m !== 'process' && m !== 'assert'),
       ],
       output: {
         entryFileNames: '[name].cjs',
